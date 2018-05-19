@@ -8,7 +8,7 @@ class MessagesPage extends React.Component {
             <div className={'message'}>
                 <p>{created_at}</p>
                 <p>{text}</p>
-                <LinkItem to={`messages/${this.props.data.id}`}>
+                <LinkItem to={`/messages/${this.props.data.id}`}>
                     Show Message
                 </LinkItem>
             </div>
