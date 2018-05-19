@@ -1,10 +1,8 @@
 import React from 'react';
 
 import App from './client/components/App.react';
-
-const Foo = ({ props }) => (
-  <div>foo</div>
-);
+import Main from './client/components/Main.react';
+import Messages from './client/components/Messages.react';
 
 export default [
   {
@@ -12,11 +10,11 @@ export default [
     Component: App,
     children: [
       {
-        Component: () => <div>Main</div>,
+        Component: Main,
       },
       {
-        path: 'foo',
-        getComponent: Foo,
+        path: '/messages',
+        Component: Messages,
       },
     ],
   },
