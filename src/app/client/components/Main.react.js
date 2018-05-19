@@ -1,6 +1,6 @@
 import * as React from 'react';
 import axios from "axios/index";
-import Message from './Message.react'
+import MessagesPage from './MessagesPage.react'
 
 class Main extends React.Component {
     constructor () {
@@ -20,12 +20,10 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                Messages
-                <button onClick={this.handleClick}>Get Messages</button>
                 <ul>
                     {this.state.messages.map(function (message) {
                         return (
-                            <Message key={message.id} data={message} />
+                            <MessagesPage key={message.id} data={message} />
                         );
                     })}
                 </ul>

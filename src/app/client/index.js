@@ -45,7 +45,6 @@ const ConnectedRouter = createConnectedRouter({
   render: createRender({
     renderError: ({ error }) => (
       <div>
-          {console.log(error)}
         {error.status === 404 ? 'Not found' : 'Error'}
       </div>
     ),

@@ -12,22 +12,23 @@ class Message extends React.Component {
     }
 
     handleClick () {
-        console.log(`https://alex-test-autotelic.herokuapp.com/messages/${this.props.data.id}`)
         axios.get(`https://alex-test-autotelic.herokuapp.com/messages/${this.props.data.id}`)
             .then((response) => {
+                console.log(response.data);
                 this.setState({message: response.data})
-            })
+            });
     }
 
     render() {
-        const { text, created_at } = this.props.data;
+        // const { text, created_at } = this.props.data;
         return (
-            <li className={'message'}>
-                <p>{created_at}</p>
-                <p>{text}</p>
-                <button onClick={this.handleClick}>Show Message</button>
-            </li>
-        )
+            <div className={'message'}>
+                Hello World
+                {/*<p>{created_at}</p>*/}
+                {/*<p>{text}</p>*/}
+                {/*<button onClick={this.handleClick}>Show Message</button>*/}
+            </div>
+        );
     }
 }
 
