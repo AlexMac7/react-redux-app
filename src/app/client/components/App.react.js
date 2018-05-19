@@ -3,6 +3,7 @@ import LinkItem from './LinkItem.react';
 
 function App(props) {
   return (
+    //  Note, at four hours now
     <div>
       <h1>SVZ</h1>
       <ul>
