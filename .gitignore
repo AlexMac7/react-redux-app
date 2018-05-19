@@ -72,3 +72,6 @@ errorShots
 cypress/screenshots/
 
 heroku-app-payload.json
+
+# JetBrains
+.idea
