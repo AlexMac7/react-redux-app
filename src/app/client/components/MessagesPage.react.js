@@ -6,10 +6,10 @@ class MessagesPage extends React.Component {
         const { text, created_at } = this.props.data;
         return (
             <div className={'message'}>
-                <p>{created_at}</p>
-                <p>{text}</p>
+                <p>Created At: {created_at}</p>
+                <p>Text: {text}</p>
                 <LinkItem to={`/messages/${this.props.data.id}`}>
-                    Show Message
+                    View Message
                 </LinkItem>
             </div>
         )

@@ -7,26 +7,24 @@ class Message extends React.Component {
         this.state = {
             message: []
         }
-
-        this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick () {
-        axios.get(`https://alex-test-autotelic.herokuapp.com/messages/${this.props.data.id}`)
+    componentDidMount() {
+        axios.get(`https://alex-test-autotelic.herokuapp.com/messages/${this.props.params.messageId}`)
             .then((response) => {
-                console.log(response.data);
                 this.setState({message: response.data})
-            });
+            })
     }
 
     render() {
-        // const { text, created_at } = this.props.data;
+        const { id, text, author, created_at, updated_at } = this.state.message;
         return (
-            <div className={'message'}>
-                Hello World
-                {/*<p>{created_at}</p>*/}
-                {/*<p>{text}</p>*/}
-                {/*<button onClick={this.handleClick}>Show Message</button>*/}
+            <div>
+                <p>Id: {id}</p>
+                <p>Text: {text}</p>
+                <p>Author: {author}</p>
+                <p>Created At: {created_at}</p>
+                <p>Updated At: {updated_at}</p>
             </div>
         );
     }
