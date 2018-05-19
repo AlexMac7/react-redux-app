@@ -20,13 +20,13 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <ul>
+                <div>
                     {this.state.messages.map(function (message) {
                         return (
                             <MessagesPage key={message.id} data={message} />
                         );
                     })}
-                </ul>
+                </div>
             </div>
         )
     }

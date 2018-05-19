@@ -12,13 +12,11 @@ export default [
             {
                 path: '/messages',
                 Component: Main,
-                children: [
-                    {
-                        path: '/messages/:messageId',
-                        Component: Message,
-                    },
-                ],
             },
+            {
+                path: '/messages/:messageId',
+                Component: Message,
+            }
         ],
     },
 ];
